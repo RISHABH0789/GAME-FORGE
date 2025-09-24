@@ -1,0 +1,70 @@
+<html>
+<head>
+  <title>TO-DO-LIST</title>
+</head>
+<body>
+  <div id="list">
+    <h1>TO-DO-LIST</h1>
+    <h3>WRITE DOWN ALL TASK</h3>
+    <input type="text" id="task_input">
+    <button onclick="remove_last_task()">Remove Task</button>
+    <button onclick="print_tasks()">Print Task</button>
+  </div>
+  <div id="tasks">
+    <ul id="task_list"></ul>
+  </div>
+</body>
+</html>
+<style>
+body{
+  text-align: center;
+  font-family:Times New Roman;
+  background:  dimgrey;
+  margin: auto;
+  max-width: 500px;
+}
+input{
+  font-size:25px;
+  border-radius:20px;
+}
+#list{
+  box-shadow: 2px 5px;
+  border-radius: 10px;
+  background: darkslategrey;
+  border:none;
+  color: azure;
+}
+#tasks{
+  border:none;
+  color: azure;
+  box-shadow: 5px 2px;
+  background-color: cornflowerblue;
+  border-radius: 10px;
+}
+button{
+  border:none;
+  border-radius:5px;
+  color: azure;
+  background: slategrey;
+}
+</style>
+<script>
+let given_tasks = document.getElementById("task_input");
+
+function print_tasks() {
+    let print_task = given_tasks.value;
+    if (print_task.trim() === "") return; // Don't add empty tasks
+
+    let li = document.createElement("li");
+    li.textContent = print_task;
+    document.getElementById("task_list").appendChild(li);
+
+    given_tasks.value = ""; // Clear input after adding
+}
+function remove_last_task() {
+      let taskList = document.getElementById("task_list");
+      if (taskList.lastChild) {
+        taskList.removeChild(taskList.lastChild);
+      }
+}
+</script>

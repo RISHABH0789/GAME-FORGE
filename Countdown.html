@@ -1,0 +1,59 @@
+<html>
+<head>
+  <link rel="website icon" type="png" href="logo.png">
+  <title>Countdown</title>
+</head>
+<body>
+  <div id="countdown"></div>
+</body>
+</html>
+<script>
+  let hours = prompt("Enter hours:");
+  let minutes = prompt("Enter minutes:");
+
+  // Convert inputs to integers
+  hours = parseInt(hours);
+  minutes = parseInt(minutes);
+
+  // Calculate total time in seconds
+  let totalSeconds = (hours * 3600) + (minutes * 60);
+  let countdownDisplay = document.getElementById("countdown");
+
+  if (isNaN(totalSeconds) || totalSeconds <= 0) {
+    countdownDisplay.textContent = "Invalid time entered.";
+  } else {
+    let countdown = setInterval(function () {
+      let h = Math.floor(totalSeconds / 3600);
+      let m = Math.floor((totalSeconds % 3600) / 60);
+      let s = totalSeconds % 60;
+
+      countdownDisplay.textContent = `Time left: ${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+      
+      totalSeconds--;
+      if (totalSeconds < 0) {
+        clearInterval(countdown);
+        countdownDisplay.textContent = "⏰ Time's up!";
+      }
+    }, 1000);
+  }
+</script>
+<style>
+body{
+  background:black;
+  text-align: center;
+  margin-top: 100px;
+  color:greenyellow;
+  font-family:Monospace;
+}
+#countdown{
+  margin:50px;
+  width:500px;
+  height:200px;
+  font-size:50px;
+  background:#001D0A;
+  border-radius:25px;
+  text-align:center;
+}
+
+
+</style>

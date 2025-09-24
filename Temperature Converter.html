@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Temperature Converter</title>
+</head>
+<body>
+  <form>
+    <h1>
+    Temperature Converter
+    </h1>
+    <input type="number" id="textbox" value="0"><br>
+    <input type="radio" id="celcius">
+    <label>Fahrenhite To Celcius</label><br>
+    <input type="radio" id="fahrenhite">
+    <label>Celcius To Fahrenhite</label><br>
+    <button type="button" onclick="convert()">Submit</button><br>
+    <p id="result"></p>
+  </form>
+</body>
+</html>
+<style>
+h1{
+  color:skyblue;
+}
+form{
+  font-family:Times New Roman;
+  background:grey;
+  margin:auto;
+  max-width:350px;
+  text-align:center;
+  border-radius:25px;
+  border-width:20px;
+  box-shadow:5px 10px;
+}
+label{
+  color:skyblue;
+  font-size:25px;
+}
+#textbox{
+  text-align:center;
+  font-size:15px;
+}
+#result{
+  color:skyblue;
+  font-weight:bold;
+}
+button{
+  color:white;
+  background:red;
+  border-radius:20px;
+}
+</style>
+<script>
+const isfahrenhite=document.getElementById("fahrenhite");
+const textbox=document.getElementById("textbox");
+const iscelcius=document.getElementById("celcius");
+const result=document.getElementById("result");
+let temp;
+
+function convert(){
+  if(isfahrenhite.checked){
+    temp=Number(textbox.value);
+    temp=temp * 9 / 5 + 32;
+    result.textContent=`Answer is ${temp}`;
+  }
+  else if(iscelcius.checked){
+    temp=Number(textbox.value);
+    temp=(temp-32)*(5/9);
+    result.textContent=`Answer is ${temp}`;
+  }
+  else if(iscelcius.checked===true&&isfahrenhite.checked===true){
+    result.textContent="Select Anyone Of Them!";
+  }
+  else{
+    result.textContent="Select A Unit!";
+  }
+}
+</script>
