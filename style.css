@@ -1,90 +1,90 @@
 body {
-  background-color: #0d0d0d;
+  background: linear-gradient(135deg, #0a0a0a, #141414);
   color: #e0e0e0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  font-family: 'Poppins', Arial, sans-serif;
+  line-height: 1.7;
   margin: 0;
   padding: 20px;
 }
+.logo {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 20px;
+  filter: drop-shadow(0 0 12px #6a00ff);
+}
 #myh1 {
   text-align: center;
-  border-radius: 8px;
-  background: #1a1aff;
-  color: #f5f5f5;
-  font-family: monospace;
-  padding: 10px;
-  box-shadow: 0 0 15px #1a1aff;
-}
-.intro {
-  padding: 15px;
-  border-radius: 8px;
-  background: #222;
-  color: #b3e5fc;
-  font-family: monospace;
-  border: 1px solid #333;
-  box-shadow: 0 0 10px #00e5ff;
-}
-.typesOfGames {
-  background: #111; 
-  color: #f1f1f1;
-  font-family: "Times New Roman";
-  border-radius: 5px;
-  padding: 25px;
-  box-shadow: 0 0 15px #00ff99; /* neon green glow */
-  margin: 20px auto;
-}
-.pov {
-  background: #1a1a1a;
-  color: #ffffff;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 0 12px #ff3399; /* neon pink */
-  font-family: Verdana, sans-serif;
-}
-.gameInfo {
-  background: #181818;
-  color: #f5f5f5;
-  font-family: "Times New Roman";
-  border-radius: 8px;
-  padding: 15px;
-  margin: 15px 0;
-  box-shadow: 0 0 12px #ff9900; /* orange glow */
-  border: 1px solid #333;
-}
-.aboutInfo {
-  background: #141414;
-  color: #ddd;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #666;
-  margin-top: 20px;
-}
-.business {
-  background: #2626ff;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #6a00ff, #0077ff);
   color: #fff;
-  padding: 5px;
-  border-radius: 5px;
-  display: inline-block;
+  font-family: 'Roboto Mono', monospace;
+  padding: 15px;
+  font-size: 2rem;
+  box-shadow: 0 0 25px rgba(106, 0, 255, 0.7);
+  margin-bottom: 20px;
 }
-.imgs {
-  background: #000;
-  padding: 10px;
-  text-align: center;
-  border-radius: 8px;
+.intro,
+.typesOfGames,
+.pov,
+.gameInfo,
+.aboutInfo {
+  background: #1b1b1b;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 0 18px rgba(0, 119, 255, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.intro:hover,
+.typesOfGames:hover,
+.pov:hover,
+.gameInfo:hover,
+.aboutInfo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px rgba(106, 0, 255, 0.6);
+}
+h3 {
+  color: #9f7fff;
+  font-family: 'Roboto Mono', monospace;
+  border-left: 4px solid #0077ff;
+  padding-left: 10px;
+  margin-bottom: 10px;
 }
 a {
   color: #00e5ff;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s;
 }
 a:hover {
-  color: #ff3399;
-  text-shadow: 0 0 8px #ff3399;
+  color: #ff00cc;
+  text-shadow: 0 0 12px #ff00cc;
 }
-.logo {
-  width: 100px;
-  height: auto;
-  display: block;
-  margin: auto;
-  filter: drop-shadow(0 0 10px #00e5ff);
+.business {
+  background: linear-gradient(90deg, #0077ff, #6a00ff);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: bold;
+  box-shadow: 0 0 12px rgba(0, 119, 255, 0.7);
 }
+.imgs {
+  margin-top: 15px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  background: #0f0f0f;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
+}
+.imgs img {
+  margin: 0 10px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.imgs img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 12px #00e5ff);
+                      }
