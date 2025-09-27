@@ -11,10 +11,10 @@ Whether you want to learn about game genres, dimensions, perspectives, or see so
 - Meet the coder: basics about me, my journey, and what drives me
 <br><br>
 Front will look like this:
-![image_1](https://github.com/RISHABH0789/GAME-FORGE/blob/726c39bcd431d4f9f005907168d8f805652ba188/Screenshot_1.jpg)
+![image_1]()
 Your name will be asked to print on top as shown in the previous image:
 ![image_2](https://github.com/RISHABH0789/GAME-FORGE/blob/726c39bcd431d4f9f005907168d8f805652ba188/Screenshot_2.jpg)
 An example of how you will get information:
-![image_3](https://github.com/RISHABH0789/GAME-FORGE/blob/726c39bcd431d4f9f005907168d8f805652ba188/Screenshot_3.jpg)
+![image_3]()
 All extra fun projects:
-![image_4](https://github.com/RISHABH0789/GAME-FORGE/blob/726c39bcd431d4f9f005907168d8f805652ba188/Screenshot_4.jpg)
+![image_4]()
